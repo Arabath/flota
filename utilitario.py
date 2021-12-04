@@ -3,28 +3,19 @@
         cargas de hasta 2 kg.
 
 """
+from vehiculo import Vehiculo
 
-class Utilitario():
+
+class Utilitario(Vehiculo):
     """ 
     pass
     """
     def __init__(self) -> None:
-        self.__tanque = 60
-        self.__autonomia = 9
-        self.__carga = 400
-
-    @property
-    def tanque(self): return self.__tanque
-    @property
-    def autonomia(self): return self.__autonomia
-    @property
-    def carga(self): return self.__carga
+        super().__init__(60,9,400)
 
 
-    def distanciaMaxima(self) -> int:
-        """ Devuelve la distancia maxima que recorre el vehiculo """
-        return self.tanque * self.autonomia
+        
+if __name__ == '__main__':
+    utilitario = Utilitario()
+    print(utilitario.consumoCada100())
 
-    def consumoNaftaDistancia(self) -> int:
-        """ Devuelve cuanto consume el vehiculo cada 100 km """    
-        return self.distanciaMaxima() / 100

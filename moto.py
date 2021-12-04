@@ -4,33 +4,23 @@
 
 """
 
-class Moto():
+from vehiculo import Vehiculo
+
+
+class Moto(Vehiculo):
     """ 
     pass
     """
     def __init__(self) -> None:
-        self.__tanque = 11
-        self.__autonomia = 20
-        self.__carga = 2
-
-    @property
-    def tanque(self): return self.__tanque
-    @property
-    def autonomia(self): return self.__autonomia
-    @property
-    def carga(self): return self.__carga
+        super().__init__(11,20,2)
+      
+    
 
 
-    def distanciaMaxima(self) -> int:
-        """ Devuelve la distancia maxima que recorre el vehiculo """
-        return self.tanque * self.autonomia
-
-    def consumoNaftaDistancia(self) -> int:
-        """ Devuelve cuanto consume el vehiculo cada 100 km """    
-        return self.distanciaMaxima() / 100
-   
-moto = Moto()
-print(moto.distanciaMaxima())
-print(moto.consumoNaftaDistancia())
+ 
+if __name__ == '__main__':
+    moto = Moto()
+    print(moto.distanciaMaxima())
+    print(moto.consumoNaftaDistancia())
 
         

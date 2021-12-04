@@ -13,4 +13,4 @@ class TestMoto(unittest.TestCase):
     def test_ConsumoDeNaftaCada100Kms(self):
         """ Test del método consumoNaftaDistancia() """
 
-        self.assertEqual(self.moto.consumoNaftaDistancia(), 2.2)
+        self.assertEqual(self.moto.consumoCada100(), 5)
