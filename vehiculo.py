@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 class Vehiculo(ABC):
-    """ """
+    """ Clase abstracta de un vehiculo cualquiera """
     @abstractmethod
     def __init__(self, tanque:int, autonomia:int, carga:int) -> None:
         self.__tanque = tanque
@@ -24,6 +24,8 @@ class Vehiculo(ABC):
         """ Devuelve cuantos litros consume el vehiculo cada 100 km """    
         return 100 / self.__autonomia
 
+    def vehiculoEconomico(self) -> 
 if __name__ == '__main__':
-    vehiculo = Vehiculo(2,4,6)
+    
+    C:\Python39\Scripts
     

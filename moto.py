@@ -21,6 +21,6 @@ class Moto(Vehiculo):
 if __name__ == '__main__':
     moto = Moto()
     print(moto.distanciaMaxima())
-    print(moto.consumoNaftaDistancia())
+    print(moto.consumoCada100())
 
         
